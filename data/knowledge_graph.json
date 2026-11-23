@@ -1,0 +1,89 @@
+
+{
+  "project": "Mixology & Flavor Pairing",
+  "description": "調酒風味學與經典結構知識圖譜",
+  "version": "1.0",
+  "nodes": [
+    {
+      "id": "doc1",
+      "title": "六大基酒風味圖譜",
+      "path": "wiki/doc1.md",
+      "category": "原料與風味",
+      "keywords": ["基酒", "原料", "植物香氣", "蒸餾"]
+    },
+    {
+      "id": "doc2",
+      "title": "利口酒與加烈葡萄酒",
+      "path": "wiki/doc2.md",
+      "category": "原料與風味",
+      "keywords": ["利口酒", "加烈葡萄酒", "植物香氣", "甜味"]
+    },
+    {
+      "id": "doc3",
+      "title": "酸甜平衡與飲品結構",
+      "path": "wiki/doc3.md",
+      "category": "風味科學",
+      "keywords": ["酸味", "甜味", "苦味", "風味平衡"]
+    },
+    {
+      "id": "doc4",
+      "title": "糖漿種類與口感質地",
+      "path": "wiki/doc4.md",
+      "category": "風味科學",
+      "keywords": ["糖類", "甜味", "黏稠度", "口感"]
+    },
+    {
+      "id": "doc5",
+      "title": "搖盪與攪拌的物理原理",
+      "path": "wiki/doc5.md",
+      "category": "物理與製程",
+      "keywords": ["混合", "擾動", "泡沫", "溫度"]
+    },
+    {
+      "id": "doc6",
+      "title": "冰塊物理學與融水控制",
+      "path": "wiki/doc6.md",
+      "category": "物理與製程",
+      "keywords": ["冰塊", "熱傳遞", "相變化", "稀釋"]
+    },
+    {
+      "id": "doc7",
+      "title": "苦味與芳香分子的感官作用",
+      "path": "wiki/doc7.md",
+      "category": "感官科學",
+      "keywords": ["苦味", "香氣", "嗅覺", "揮發性化合物"]
+    },
+    {
+      "id": "doc8",
+      "title": "飲品器皿與裝飾物的設計功能",
+      "path": "wiki/doc8.md",
+      "category": "感官設計",
+      "keywords": ["器皿", "裝飾", "視覺", "感官設計"]
+    }
+  ],
+  "edges": [
+    {"from": "doc1", "to": "doc2", "relation": "related_to"},
+    {"from": "doc1", "to": "doc3", "relation": "related_to"},
+    {"from": "doc1", "to": "doc5", "relation": "related_to"},
+    {"from": "doc2", "to": "doc3", "relation": "related_to"},
+    {"from": "doc2", "to": "doc4", "relation": "related_to"},
+    {"from": "doc3", "to": "doc4", "relation": "related_to"},
+    {"from": "doc3", "to": "doc7", "relation": "related_to"},
+    {"from": "doc4", "to": "doc5", "relation": "related_to"},
+    {"from": "doc5", "to": "doc6", "relation": "related_to"},
+    {"from": "doc6", "to": "doc8", "relation": "related_to"},
+    {"from": "doc7", "to": "doc8", "relation": "related_to"},
+    {"from": "doc8", "to": "doc5", "relation": "related_to"}
+  ],
+  "workflow": [
+    "Source Ingestion",
+    "Knowledge Extraction",
+    "Wiki Generation",
+    "Wiki Linking",
+    "Knowledge Validation",
+    "Knowledge Graph",
+    "Knowledge Retrieval",
+    "HTML Slide Generation",
+    "Final Review"
+  ]
+}
